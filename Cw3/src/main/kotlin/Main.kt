@@ -1,8 +1,8 @@
 import kotlin.random.Random
-
 fun main(){
 //    wersja1();
-    tablice();
+//    tablice();
+    imiona();
 }
 
 fun wersja1 (){
@@ -83,8 +83,28 @@ fun tablice(){
         println("\nrozmiar tablicy to ${array.size}")
     }
 
-    //* Konstruktor tablic
+    // Konstruktor tablic
     val arr3 =  Array<Int>(12, {4})
     printArr(arr3);
+}
+
+fun imiona(){
+    fun printList(array: MutableList<String?>){
+        for(elem in array){
+            print(elem.toString()+ " ")
+        }
+        println("\nrozmiar tablicy to ${array.size}")
+    }
+
+    println("Podaj imie")
+    var imie = readLine();
+
+    val imiona = MutableList<String?>(0){""} ;
+    while (imie != "stop"){
+        println("Podaj imie")
+        imie = readLine();
+        imiona.add(imie);
+    }
+    printList(imiona)
 }
 
