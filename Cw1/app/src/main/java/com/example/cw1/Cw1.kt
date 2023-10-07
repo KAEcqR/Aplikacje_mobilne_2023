@@ -8,7 +8,7 @@ fun main(){
 }
 
 fun wizytowka(firstname: String, lastname: String, age: Int=18 ):String{
-    return "--------------\nimie: $firstname \nnazwisko: $lastname \nwiek: $age \n--------------";
+    return "--------------\nImie: $firstname \nNazwisko: $lastname \nWiek: $age \n--------------";
 }
 
 fun test(){
