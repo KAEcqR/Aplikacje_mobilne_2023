@@ -3,7 +3,9 @@ import kotlin.random.Random
 fun main(){
 //    repeat("kacper", 10)
 //    withWhile();
-    withDoWhile();
+//    withDoWhile();
+    NWDrek(4,13)
+    NWDiter(4,13)
 }
 
 fun repeat(tekst: String, count: Int) {
@@ -36,10 +38,36 @@ fun withWhile(){
 fun withDoWhile(){
     var losowa = 0;
     var licznik = 0;
+    var suma = 0;
+    var srednia = 0;
     do {
         losowa = Random.nextInt(0, 20);
         print(losowa.toString() + " ");
         licznik ++;
+        suma = suma + losowa;
     }while (losowa != 0);
+    srednia = suma / licznik;
     println("\nudalo sie w $licznik prob")
+    println("\nsuma liczb to $suma ")
+    println("\nsrednia liczb to $srednia")
+}
+
+fun NWDrek(a: Int, b: Int) {
+    if (b == 0){
+        println("rek $a")
+    }else {
+        NWDrek(b, a % b)
+    }
+}
+
+fun NWDiter(a: Int, b: Int) {
+    var pierwsza = a
+    var druga = b
+
+    while (druga != 0) {
+        val zmienna = pierwsza
+        pierwsza = druga
+        druga = zmienna % druga
+    }
+    println("iter $pierwsza")
 }
