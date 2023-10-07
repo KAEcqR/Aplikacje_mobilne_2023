@@ -80,10 +80,11 @@ fun tablice(){
         for(elem in array){
             print(elem.toString()+ " ")
         }
+        println("\nrozmiar tablicy to ${array.size}")
     }
 
     //* Konstruktor tablic
-    val arr3 =  Array<Int>(2, {2})
+    val arr3 =  Array<Int>(12, {4})
     printArr(arr3);
 }
 
