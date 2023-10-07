@@ -2,7 +2,8 @@ import kotlin.random.Random
 fun main(){
 //    wersja1();
 //    tablice();
-    imiona();
+//    imiona();
+    mapy();
 }
 
 fun wersja1 (){
@@ -90,16 +91,19 @@ fun tablice(){
 
 fun imiona(){
     fun printList(array: MutableList<String?>){
+        print("imiona: ");
         for(elem in array){
-            print(elem.toString()+ " ")
+            print( elem.toString()+ " ")
         }
         println("\nrozmiar tablicy to ${array.size}")
     }
 
-    println("Podaj imie")
-    var imie = readLine();
-
     val imiona = MutableList<String?>(0){""} ;
+
+    println("Podaj imie, stop zakancza")
+    var imie = readLine();
+    imiona.add(imie);
+
     while (imie != "stop"){
         println("Podaj imie")
         imie = readLine();
@@ -107,4 +111,17 @@ fun imiona(){
     }
     printList(imiona)
 }
+fun mapy(){
+    val MutableMap = mapOf<String, String>("red" to "czerwony","blue" to "niebieski","green" to "zielony","yellow" to "zolty",)
+    MutableMap.forEach { println("${it.key} => ${it.value}")}
 
+    val rk = MutableMap.entries.shuffled().first().key
+
+    println("Jaki to kolor? : " + rk)
+    val odpowiedz = readLine();
+    if (odpowiedz == MutableMap[rk]){
+        println("Gratulacje, masz racje szefie")
+    } else {
+        println("Cymbale, kolorki cie przerastaja'")
+    }
+}
