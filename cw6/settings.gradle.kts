@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CW6"
+rootProject.name = "Cw6"
 include(":app")
