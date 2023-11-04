@@ -7,10 +7,14 @@ android {
     namespace = "com.example.cw11"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true;
+    }
+
     defaultConfig {
         applicationId = "com.example.cw11"
-        minSdk = 34
-        targetSdk = 34
+        minSdk = 28
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
